@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.csz'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile "org.springframework.boot:spring-boot-starter-web:2.0.0.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:2.0.0.RELEASE"
+    compile "org.apache.commons:commons-lang3:3.5"
+    compile "com.h2database:h2:1.4.195"
+}
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'

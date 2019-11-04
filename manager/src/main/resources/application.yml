@@ -11,3 +11,12 @@ server:
   servlet:
     context-path: /manager
   port: 8086
+
+swagger:
+  groupName: manager
+  basePackage: com.csz.manager.controller
+
+logging:
+  level:
+    com.googlecode.jsonrpc4j: debug
+

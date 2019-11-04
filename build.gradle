@@ -22,9 +22,8 @@ subprojects {
 
         repositories {
             mavenLocal()
-            maven {
-                url = 'http://nexus.vfinance.cn:9081/content/groups/public/'
-            }
+            maven { url = 'http://nexus.vfinance.cn:9081/content/groups/public/' }
+            maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
             mavenCentral()
         }
 

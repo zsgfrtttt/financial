@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /seller
+  port: 8087
+
+
+logging:
+  level:
+    com.googlecode.jsonrpc4j: debug
+
+rpc:
+  client:
+    url: http://localhost:8086/manager/
+    basePackage: com.csz.rpc

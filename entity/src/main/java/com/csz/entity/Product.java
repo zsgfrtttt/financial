@@ -1,10 +1,12 @@
 package com.csz.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -20,6 +22,7 @@ public class Product {
     /**
      * @see com.csz.entity.enums.ProductStatus
      */
+    @ApiModelProperty(value = "状态",dataType = "com.csz.entity.enums.ProductStatus")
     private String status;
     private String memo;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")

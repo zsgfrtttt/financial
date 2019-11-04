@@ -2,6 +2,8 @@ package com.csz.manager.controller;
 
 import com.csz.entity.Product;
 import com.csz.manager.service.ProductService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +19,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
+@Api(tags = "product",description = "产品模块")
 public class ProductController {
     private static Logger LOG = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
     private ProductService mProductService;
 
+    @ApiOperation(value = "创建产品",notes = "根据业务创建产品")
     @RequestMapping(value = "",method = RequestMethod.POST)
     public Product addProduct(@RequestBody Product product) {
         return mProductService.addProduct(product);
